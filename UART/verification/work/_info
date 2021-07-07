@@ -1,0 +1,1144 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Luca Fumarola/Desktop/RS232/TX/verification
+Ebi
+Z0 w1608021793
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 129
+Z3 dC:/Users/Luca Fumarola/Desktop/RS232/UART/verification
+Z4 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd
+Z5 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd
+l0
+L4 1
+VQPa54fS6Fg@gG[5z:9:jf1
+!s100 nz?S;CnZzlK@Wo2PSLnCo0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1610054696
+!i10b 1
+Z8 !s108 1610054696.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd|
+Z10 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+DEx4 work 2 bi 0 22 QPa54fS6Fg@gG[5z:9:jf1
+!i122 129
+l74
+L31 58
+V^FW?=G<N8>ia3HVjhz7?o3
+!s100 EQXT^zLFhJfhH]B56BmP>2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecounter
+Z13 w1608016260
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 130
+R3
+Z15 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd
+Z16 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd
+l0
+L6 1
+VPJ;UQRD6SDXVW1G6YRWY90
+!s100 6bbKBUkRIlTghJkch>XS11
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd|
+Z18 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 7 counter 0 22 PJ;UQRD6SDXVW1G6YRWY90
+!i122 130
+l22
+Z19 L17 25
+V[X5hUfSA_a1d=?LZCWffY3
+!s100 MmmzJggEE24TU36MRh>H>1
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Ecounter_10
+R13
+R14
+R1
+R2
+!i122 132
+R3
+Z20 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd
+Z21 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd
+l0
+L6 1
+VgG:E55S2SaBkH>c3Q5n462
+!s100 <[IGOTAWNB]eX1SCnHBjk1
+R6
+32
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd|
+Z23 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 10 counter_10 0 22 gG:E55S2SaBkH>c3Q5n462
+!i122 132
+l22
+L17 26
+V9SM]eQP1BZ<PEKOgVYRe91
+!s100 7V2JBmjOJ:CVM[OF:[E<n2
+R6
+32
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Ecounter_16
+R13
+R14
+R1
+R2
+!i122 133
+R3
+Z24 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd
+Z25 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd
+l0
+L8 1
+VJ@>K>^MG>c>0F3Nk;Ch9k0
+!s100 Ej1VdFAcnbalG^<THQzji1
+R6
+32
+Z26 !s110 1610054697
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd|
+Z28 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 10 counter_16 0 22 J@>K>^MG>c>0F3Nk;Ch9k0
+!i122 133
+l24
+L19 25
+VY^IN1:Hm2<HPh;MORF4o[1
+!s100 2K5nW^e3he6LQIYaB4Yn>2
+R6
+32
+R26
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Ecounter_8
+R13
+R14
+R1
+R2
+!i122 131
+R3
+Z29 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd
+Z30 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd
+l0
+L6 1
+V<`7oN0;3Yk]JAzB`=FS_S2
+!s100 ?D^De8:z1TY^R_>YKEMlR2
+R6
+32
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd|
+Z32 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 9 counter_8 0 22 <`7oN0;3Yk]JAzB`=FS_S2
+!i122 131
+l22
+R19
+VlS5A7UDI<6ilf<1_n[=l]2
+!s100 b4zj@UVVFjSK460T6<iHk0
+R6
+32
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Ecounter_fsm
+R13
+R14
+R1
+R2
+!i122 134
+R3
+Z33 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd
+Z34 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd
+l0
+L6 1
+V^L0`GP4TTamaOPPmRfa2i0
+!s100 ilXdhi32LhMN2njUZN8SH3
+R6
+32
+R26
+!i10b 1
+Z35 !s108 1610054697.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd|
+Z37 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 11 counter_fsm 0 22 ^L0`GP4TTamaOPPmRfa2i0
+!i122 134
+l22
+R19
+V<6c@<554S[GkcXi]<XK1T1
+!s100 jNkUe4z=]iMBMBiX5FT3E0
+R6
+32
+R26
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R11
+R12
+Ecounter_wait
+R13
+R14
+R1
+R2
+!i122 135
+R3
+Z38 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd
+Z39 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd
+l0
+L6 1
+V84CXnhmC[Oa849<Z[5g5I0
+!s100 cW0lRiX4nl2La]o<6fMc>1
+R6
+32
+R26
+!i10b 1
+R35
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd|
+Z41 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd|
+!i113 1
+R11
+R12
+Artl
+R14
+R1
+R2
+DEx4 work 12 counter_wait 0 22 84CXnhmC[Oa849<Z[5g5I0
+!i122 135
+l22
+R19
+VOV_RF0Rb7PeeV14R>?V`g1
+!s100 YWFX1CKBk=O^48COUk=0G1
+R6
+32
+R26
+!i10b 1
+R35
+R40
+R41
+!i113 1
+R11
+R12
+Edatapath
+R13
+R1
+R2
+!i122 136
+R3
+Z42 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd
+Z43 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd
+l0
+L4 1
+VFdWE910l<WWC:4JB>CFP51
+!s100 ]]eMnY3LTa0V`G?i?Cj4d0
+R6
+32
+R26
+!i10b 1
+R35
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd|
+Z45 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 8 datapath 0 22 FdWE910l<WWC:4JB>CFP51
+!i122 136
+l43
+L17 37
+V0LfG9iLXVnBVhQ@ETofmF0
+!s100 633f^KAB:4M<^O5BHHMD41
+R6
+32
+R26
+!i10b 1
+R35
+R44
+R45
+!i113 1
+R11
+R12
+Edatapath_bi
+R13
+R1
+R2
+!i122 137
+R3
+Z46 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd
+Z47 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd
+l0
+L4 1
+Vf=d95zKHHG`[PF8_hAcRX1
+!s100 D5l0B2iDEGaJ4DkOcG=Zh2
+R6
+32
+R26
+!i10b 1
+R35
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd|
+Z49 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 11 datapath_bi 0 22 f=d95zKHHG`[PF8_hAcRX1
+!i122 137
+l42
+L19 32
+V9l:_K]O14ogD]KQ3]XCZN0
+!s100 k^B7NzUVmJ>Ji6:R?<]1F3
+R6
+32
+R26
+!i10b 1
+R35
+R48
+R49
+!i113 1
+R11
+R12
+Edatapath_rx
+R13
+R1
+R2
+!i122 138
+R3
+Z50 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd
+Z51 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd
+l0
+L4 1
+V0i^Z[bjZQzWhbOCj6Bgan2
+!s100 TXSTPXm9KgnKD`EBJ=fSG3
+R6
+32
+Z52 !s110 1610054698
+!i10b 1
+R35
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd|
+Z54 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 11 datapath_rx 0 22 0i^Z[bjZQzWhbOCj6Bgan2
+!i122 138
+l65
+L18 66
+VbmIR3H5`8gQOB`9RSVm2V2
+!s100 ;0:_j4OSW^6kEC@fO=Ph:1
+R6
+32
+R52
+!i10b 1
+R35
+R53
+R54
+!i113 1
+R11
+R12
+Eff
+Z55 w1610053573
+R1
+R2
+!i122 139
+R3
+Z56 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd
+Z57 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd
+l0
+L4 1
+Vj^GUhd`;bN<e;<aEBaSGj1
+!s100 ^Xk;?kXmj^Uhz;gF67NaI1
+R6
+32
+R52
+!i10b 1
+Z58 !s108 1610054698.000000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd|
+Z60 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 2 ff 0 22 j^GUhd`;bN<e;<aEBaSGj1
+!i122 139
+l17
+Z61 L15 18
+VHPU?@PoThf=Q3E9o_JATV1
+!s100 _WcBMiPl564AD@2]B0?[O1
+R6
+32
+R52
+!i10b 1
+R58
+R59
+R60
+!i113 1
+R11
+R12
+Efsm
+R13
+R14
+R1
+R2
+!i122 140
+R3
+Z62 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd
+Z63 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd
+l0
+L5 1
+V9?QP948UXKCL:j`>jmJBV1
+!s100 ^TXJFmzODLj=:mb]h;@7z0
+R6
+32
+R52
+!i10b 1
+R58
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd|
+Z65 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R14
+R1
+R2
+DEx4 work 3 fsm 0 22 9?QP948UXKCL:j`>jmJBV1
+!i122 140
+l16
+L11 90
+VDNW9Lz5zUNbGW;RBJ7Vel1
+!s100 `I3Y<fkX>anhcI8F5560l3
+R6
+32
+R52
+!i10b 1
+R58
+R64
+R65
+!i113 1
+R11
+R12
+Efsm_bi
+Z66 w1608022018
+R14
+R1
+R2
+!i122 141
+R3
+Z67 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd
+Z68 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd
+l0
+L5 1
+VN[do_CQR]zfn9lnEJ<G?Y0
+!s100 lF183blHEaH9c4GSA6Vc:1
+R6
+32
+R52
+!i10b 1
+R58
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd|
+Z70 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R14
+R1
+R2
+DEx4 work 6 fsm_bi 0 22 N[do_CQR]zfn9lnEJ<G?Y0
+!i122 141
+l31
+L26 114
+Va[c40h;zZoGo7klS9bTE^0
+!s100 A=3E_oXE`H<19zk6BEBb03
+R6
+32
+R52
+!i10b 1
+R58
+R69
+R70
+!i113 1
+R11
+R12
+Efsm_rx
+R13
+R14
+R1
+R2
+!i122 142
+R3
+Z71 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd
+Z72 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd
+l0
+L5 1
+V9hHzUMc]W5Mch<]o1c3`;0
+!s100 jRQhlDY7:m?VeoYfh@FDJ2
+R6
+32
+R52
+!i10b 1
+R58
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd|
+Z74 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R14
+R1
+R2
+DEx4 work 6 fsm_rx 0 22 9hHzUMc]W5Mch<]o1c3`;0
+!i122 142
+l16
+L11 122
+VZ4EIz4XjiLQkPkm[F2L`E2
+!s100 lEnJ@D6^`WLR;D4XhGAn61
+R6
+32
+R52
+!i10b 1
+R58
+R73
+R74
+!i113 1
+R11
+R12
+Ememory
+Z75 w1610053534
+R1
+R2
+!i122 143
+R3
+Z76 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd
+Z77 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd
+l0
+L4 1
+Vf8M@H6AB@_50Pb7`a^V=B0
+!s100 V=9GCm^e9d6>bHMJZamd@2
+R6
+32
+R52
+!i10b 1
+R58
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd|
+Z79 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 6 memory 0 22 f8M@H6AB@_50Pb7`a^V=B0
+!i122 143
+l55
+L21 53
+Vg]LJLY=5Kij:BH9`^g5hS3
+!s100 J054T_IcmHTf>Sj1m[0jE0
+R6
+32
+R52
+!i10b 1
+R58
+R78
+R79
+!i113 1
+R11
+R12
+Emux_2_to_1_8_bits
+R13
+R1
+R2
+!i122 144
+R3
+Z80 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd
+Z81 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd
+l0
+L4 1
+V2FM^CF8EKi7IENV1F4FmQ1
+!s100 SXP67i>TfV<I[QRHl>7d52
+R6
+32
+Z82 !s110 1610054699
+!i10b 1
+R58
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd|
+Z84 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 17 mux_2_to_1_8_bits 0 22 2FM^CF8EKi7IENV1F4FmQ1
+!i122 144
+l17
+L16 16
+Va4Uc[_K=ZQjR^=KiZH16a0
+!s100 UZo]X^h?=ZoJ<^M<X6ZaM3
+R6
+32
+R82
+!i10b 1
+R58
+R83
+R84
+!i113 1
+R11
+R12
+Epipeline_reg_8_bits
+R13
+R1
+R2
+!i122 145
+R3
+Z85 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd
+Z86 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd
+l0
+L4 1
+V>^naF1`=iAnN;QDR=WG2=1
+!s100 R[DNf2>BBDT5agkeBeN;E0
+R6
+32
+R82
+!i10b 1
+Z87 !s108 1610054699.000000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd|
+Z89 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 19 pipeline_reg_8_bits 0 22 >^naF1`=iAnN;QDR=WG2=1
+!i122 145
+l15
+L14 21
+Ve1IcILNLhLCjYd<Gh=;mG2
+!s100 THQmZ1YI0i:APYan8C38?3
+R6
+32
+R82
+!i10b 1
+R87
+R88
+R89
+!i113 1
+R11
+R12
+Epipo_2
+Z90 w1608021083
+R1
+R2
+!i122 146
+R3
+Z91 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd
+Z92 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd
+l0
+L4 1
+Vz=K=X2SZHg=ZH1d<BkLR50
+!s100 iTOM6Q]>QPhlbc6PTP::02
+R6
+32
+R82
+!i10b 1
+R87
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd|
+Z94 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 6 pipo_2 0 22 z=K=X2SZHg=ZH1d<BkLR50
+!i122 146
+l17
+R61
+VcXNJ`lT]XFzFPR6>lW_P63
+!s100 NjKMUO:Qkdkcck]LM9Q2L3
+R6
+32
+R82
+!i10b 1
+R87
+R93
+R94
+!i113 1
+R11
+R12
+Epipo_8
+Z95 w1608021034
+R1
+R2
+!i122 147
+R3
+Z96 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd
+Z97 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd
+l0
+L4 1
+V1^0P:l@FdARV3jDUf9ZUe0
+!s100 ]JOI;DJIQ3_U086ZR:50X1
+R6
+32
+R82
+!i10b 1
+R87
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd|
+Z99 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 6 pipo_8 0 22 1^0P:l@FdARV3jDUf9ZUe0
+!i122 147
+l17
+R61
+Vd7F[mn`PndT@O26U_3F_z2
+!s100 obfoX_W_i2k3bM>fgj[BH3
+R6
+32
+R82
+!i10b 1
+R87
+R98
+R99
+!i113 1
+R11
+R12
+Erx
+Z100 w1608034521
+R1
+R2
+!i122 148
+R3
+Z101 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd
+Z102 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd
+l0
+L4 1
+V;<h7chaWLnYaoQ2KHS0:D0
+!s100 HPbbXbcZjHW<0@1O=_QO^1
+R6
+32
+R82
+!i10b 1
+R87
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd|
+Z104 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 2 rx 0 22 ;<h7chaWLnYaoQ2KHS0:D0
+!i122 148
+l40
+Z105 L17 42
+VS<_[AM@oQ=9i7QTi15:C_1
+!s100 0ZhQ[PnTN;f]K1oUif4hG2
+R6
+32
+R82
+!i10b 1
+R87
+R103
+R104
+!i113 1
+R11
+R12
+Eshift_10_bits
+R13
+R1
+R2
+!i122 149
+R3
+Z106 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd
+Z107 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd
+l0
+L4 1
+V0MdV[N0PiW;IG5UUnknIH0
+!s100 <m1Go`ng00c6Hi^7MkfM>0
+R6
+32
+R82
+!i10b 1
+R87
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd|
+Z109 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 13 shift_10_bits 0 22 0MdV[N0PiW;IG5UUnknIH0
+!i122 149
+l25
+R105
+V=WICOV>;HQCcULebGalBn3
+!s100 cJ8^1RK4@zeV`:i?g_37R2
+R6
+32
+R82
+!i10b 1
+R87
+R108
+R109
+!i113 1
+R11
+R12
+Esipo_10
+R13
+R1
+R2
+!i122 151
+R3
+Z110 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd
+Z111 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd
+l0
+L4 1
+Vj6GNFL2iR:ZHSYeM6iW5=1
+!s100 8jHU6^827`I]B]WVL0ah^3
+R6
+32
+Z112 !s110 1610054700
+!i10b 1
+Z113 !s108 1610054700.000000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd|
+Z115 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 7 sipo_10 0 22 j6GNFL2iR:ZHSYeM6iW5=1
+!i122 151
+l23
+L15 44
+VR?[Fn:8j0?gf^>R20VFQ43
+!s100 gW1_nUhK^o7SjM_@JD^9Y1
+R6
+32
+R112
+!i10b 1
+R113
+R114
+R115
+!i113 1
+R11
+R12
+Esipo_8
+R13
+R1
+R2
+!i122 150
+R3
+Z116 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd
+Z117 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd
+l0
+L4 1
+VHoYf98oJ6LYgLljgEa0U90
+!s100 Jhc[HmX=NVo2`N6I9]Z6h3
+R6
+32
+R82
+!i10b 1
+R87
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd|
+Z119 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 6 sipo_8 0 22 HoYf98oJ6LYgLljgEa0U90
+!i122 150
+l23
+L15 40
+VY;lQDW6d46nb_Ik0=oaGP3
+!s100 fWW?;;^^]m]7:2P@ek8Vg2
+R6
+32
+R82
+!i10b 1
+R87
+R118
+R119
+!i113 1
+R11
+R12
+Etx
+R13
+R1
+R2
+!i122 152
+R3
+Z120 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd
+Z121 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd
+l0
+L4 1
+VGc`YYkmelez?i[4z]k_aT3
+!s100 S0bkldFCH=ECcTf@aJZU92
+R6
+32
+R112
+!i10b 1
+R113
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd|
+Z123 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 2 tx 0 22 Gc`YYkmelez?i[4z]k_aT3
+!i122 152
+l39
+L17 30
+VQ73NE16WRXo_d3CJ?IiSk1
+!s100 @a_e8N4J]@lOgKZ]gT1KD3
+R6
+32
+R112
+!i10b 1
+R113
+R122
+R123
+!i113 1
+R11
+R12
+Euart
+Z124 w1608024047
+R1
+R2
+!i122 153
+R3
+Z125 8C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd
+Z126 FC:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd
+l0
+L4 1
+VRlZKOi2m?WfM1JMj8XCJ_3
+!s100 QjbIJid3c>ZZD@a4?[aFU0
+R6
+32
+R112
+!i10b 1
+R113
+Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd|
+Z128 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 4 uart 0 22 RlZKOi2m?WfM1JMj8XCJ_3
+!i122 153
+l103
+L18 96
+V=9bz:KRUT9j1[QWUQN=4b2
+!s100 YikfCg=@OE0Dn;ICd]I_l2
+R6
+32
+R112
+!i10b 1
+R113
+R127
+R128
+!i113 1
+R11
+R12
+Euart_tb
+Z129 w1610054551
+Z130 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R14
+R1
+R2
+!i122 154
+R3
+Z131 8C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd
+Z132 FC:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd
+l0
+L8 1
+VlFEEV7RC09>S72H0oSE:32
+!s100 VG^BO<Jiac[6YMQd]ZYJ?0
+R6
+32
+R112
+!i10b 1
+R113
+Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd|
+Z134 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R130
+R14
+R1
+R2
+DEx4 work 7 uart_tb 0 22 lFEEV7RC09>S72H0oSE:32
+!i122 154
+l31
+L11 94
+VI;B]LAke>o^VfWH2khaCU0
+!s100 YZ2l<O7hBG6LSN@^CoKC83
+R6
+32
+R112
+!i10b 1
+R113
+R133
+R134
+!i113 1
+R11
+R12
+Euart_tb_rx
+Z135 w1608033809
+R130
+R14
+R1
+R2
+!i122 155
+R3
+Z136 8C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd
+Z137 FC:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd
+l0
+L7 1
+Vm]>=862Ih3@>[JoXNSAX52
+!s100 SOg4mh9QC;MlaNA]I]Zzf2
+R6
+32
+Z138 !s110 1610054755
+!i10b 1
+Z139 !s108 1610054754.000000
+Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd|
+Z141 !s107 C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R130
+R14
+R1
+R2
+Z142 DEx4 work 10 uart_tb_rx 0 22 m]>=862Ih3@>[JoXNSAX52
+!i122 155
+l30
+Z143 L10 208
+Z144 VYCVgB;7TolK6IHk6ioL@E3
+Z145 !s100 UMdccPL:i7aS9CLAz=BNA2
+R6
+32
+R138
+!i10b 1
+R139
+R140
+R141
+!i113 1
+R11
+R12

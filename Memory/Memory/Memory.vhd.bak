@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Memory is
+	port 
+	(
+		clk, rst_n : in std_logic;
+		rst_rx, rst_tx_data, rst_rx_data, rst_ctrl_data : in std_logic;
+		en_rx_full, en_err, en_tx_empty, en_rx_data : in std_logic;
+		en_tx_data, en_ctrl_data : in std_logic;
+		rx_data_in, tx_data_in, ctrl_data_in, rx_full_in, tx_empty_in, err_in : in std_logic_vector(7 downto 0);
+		rx_data_out, tx_data_out, ctrl_data_out, rx_full_out, tx_empty_out, err_out : out std_logic_vector(7 downto 0)
+	);
+
+end entity;
+
+architecture behaviour of Memory is
+
+
+
+begin
+
+end brehaviour;

@@ -1,0 +1,88 @@
+{C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/testbench_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/testbench_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity TESTBENCH_RX
+-- Compiling architecture BEHAVIOUR of TESTBENCH_RX
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_16.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_16.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_16
+-- Compiling architecture rtl of counter_16
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/RX.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/RX.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RX
+-- Compiling architecture rtl of RX
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/sipo_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/sipo_8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sipo_8
+-- Compiling architecture rtl of sipo_8
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_8
+-- Compiling architecture rtl of counter_8
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/fsm_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/fsm_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fsm_rx
+-- Compiling architecture BEHAVIOUR of fsm_rx
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/sipo_10.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/sipo_10.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sipo_10
+-- Compiling architecture rtl of sipo_10
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_10.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_10.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_10
+-- Compiling architecture rtl of counter_10
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_wait.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/counter_wait.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_wait
+-- Compiling architecture rtl of counter_wait
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/datapath_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/RX/verification/datapath_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity datapath_rx
+-- Compiling architecture rtl of datapath_rx
+
+} {} {}}

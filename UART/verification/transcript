@@ -1,0 +1,67 @@
+# Compile of uart_tb_rx.vhd was successful.
+# Compile of BI.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of counter_8.vhd was successful.
+# Compile of counter_10.vhd was successful.
+# Compile of counter_16.vhd was successful.
+# Compile of counter_fsm.vhd was successful.
+# Compile of counter_wait.vhd was successful.
+# Compile of datapath.vhd was successful.
+# Compile of datapath_bi.vhd was successful.
+# Compile of datapath_rx.vhd was successful.
+# Compile of FF.vhd was successful.
+# Compile of fsm.vhd was successful.
+# Compile of fsm_bi.vhd was successful.
+# Compile of fsm_rx.vhd was successful.
+# Compile of Memory.vhd was successful.
+# Compile of mux_2_to_1_8_bits.vhd was successful.
+# Compile of pipeline_reg_8_bits.vhd was successful.
+# Compile of PIPO_2.vhd was successful.
+# Compile of PIPO_8.vhd was successful.
+# Compile of RX.vhd was successful.
+# Compile of shift_10_bits.vhd was successful.
+# Compile of sipo_8.vhd was successful.
+# Compile of sipo_10.vhd was successful.
+# Compile of TX.vhd was successful.
+# Compile of UART.vhd was successful.
+# Compile of uart_tb_tx.vhd was successful.
+# 27 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of uart_tb_rx.vhd was successful.
+vsim -gui work.uart_tb
+# vsim -gui work.uart_tb 
+# Start time: 22:26:16 on Jan 07,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.uart_tb(behaviour)
+# Loading work.uart(behaviour)
+# Loading work.rx(rtl)
+# Loading work.datapath_rx(rtl)
+# Loading work.sipo_8(rtl)
+# Loading work.sipo_10(rtl)
+# Loading work.counter_10(rtl)
+# Loading work.counter_16(rtl)
+# Loading work.counter_wait(rtl)
+# Loading work.counter_8(rtl)
+# Loading work.fsm_rx(behaviour)
+# Loading work.tx(rtl)
+# Loading work.datapath(rtl)
+# Loading work.shift_10_bits(rtl)
+# Loading work.counter(rtl)
+# Loading work.counter_fsm(rtl)
+# Loading work.fsm(behaviour)
+# Loading work.bi(rtl)
+# Loading work.datapath_bi(rtl)
+# Loading work.pipeline_reg_8_bits(behaviour)
+# Loading work.mux_2_to_1_8_bits(behaviour)
+# Loading work.fsm_bi(behaviour)
+# Loading work.memory(behaviour)
+# Loading work.pipo_8(rtl)
+# Loading work.pipo_2(rtl)
+# Loading work.ff(rtl)
+add wave *
+run 1 ms
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/wave_tx.do}

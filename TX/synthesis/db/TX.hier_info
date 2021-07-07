@@ -1,0 +1,161 @@
+|TX
+clk => datapath:label_datapath.clk
+clk => fsm:label_fsm.CLK
+rst_n => fsm:label_fsm.RST_N
+enable_tx => fsm:label_fsm.enable_tx
+load => fsm:label_fsm.load
+tx_empty << fsm:label_fsm.TX_EMPTY
+dato_tx[0] => datapath:label_datapath.p_in[0]
+dato_tx[1] => datapath:label_datapath.p_in[1]
+dato_tx[2] => datapath:label_datapath.p_in[2]
+dato_tx[3] => datapath:label_datapath.p_in[3]
+dato_tx[4] => datapath:label_datapath.p_in[4]
+dato_tx[5] => datapath:label_datapath.p_in[5]
+dato_tx[6] => datapath:label_datapath.p_in[6]
+dato_tx[7] => datapath:label_datapath.p_in[7]
+en_tx_empty << fsm:label_fsm.en_tx_empty
+TxD << datapath:label_datapath.TxD
+
+
+|TX|datapath:label_datapath
+clk => shift_10_bits:shift_register.clk
+clk => counter:count.clk
+clk => counter_fsm:count_fsm.clk
+rst_n => shift_10_bits:shift_register.rst_n
+rst_n => counter:count.rst_n
+rst_n => counter_fsm:count_fsm.rst_n
+p_in[0] => shift_10_bits:shift_register.p_in[1]
+p_in[1] => shift_10_bits:shift_register.p_in[2]
+p_in[2] => shift_10_bits:shift_register.p_in[3]
+p_in[3] => shift_10_bits:shift_register.p_in[4]
+p_in[4] => shift_10_bits:shift_register.p_in[5]
+p_in[5] => shift_10_bits:shift_register.p_in[6]
+p_in[6] => shift_10_bits:shift_register.p_in[7]
+p_in[7] => shift_10_bits:shift_register.p_in[8]
+parallel_load => shift_10_bits:shift_register.load
+sh => shift_10_bits:shift_register.sh
+TxD <= shift_10_bits:shift_register.sr_out
+enable_137 => counter:count.enable
+enable_9 => counter_fsm:count_fsm.enable
+tc_137 <= counter:count.tc
+tc_9 <= counter_fsm:count_fsm.tc
+
+
+|TX|datapath:label_datapath|shift_10_bits:shift_register
+p_in[0] => sr.DATAB
+p_in[1] => sr.DATAB
+p_in[2] => sr.DATAB
+p_in[3] => sr.DATAB
+p_in[4] => sr.DATAB
+p_in[5] => sr.DATAB
+p_in[6] => sr.DATAB
+p_in[7] => sr.DATAB
+p_in[8] => sr.DATAB
+p_in[9] => sr.DATAB
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+sr_in => sr.DATAB
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+clk => sr[8].CLK
+clk => sr[9].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+rst_n => sr[8].PRESET
+rst_n => sr[9].PRESET
+sr_out <= sr[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TX|datapath:label_datapath|counter:count
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+clk => number[4].CLK
+clk => number[5].CLK
+clk => number[6].CLK
+clk => number[7].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+rst_n => number[4].ACLR
+rst_n => number[5].ACLR
+rst_n => number[6].ACLR
+rst_n => number[7].ACLR
+enable => number[0].ENA
+enable => number[7].ENA
+enable => number[6].ENA
+enable => number[5].ENA
+enable => number[4].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TX|datapath:label_datapath|counter_fsm:count_fsm
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+enable => number[0].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TX|fsm:label_fsm
+TC_137 => NEXT_STATE.OUTPUTSELECT
+TC_137 => NEXT_STATE.OUTPUTSELECT
+TC_137 => Selector1.IN2
+TC_9 => NEXT_STATE.DATAA
+TC_9 => NEXT_STATE.DATAA
+RST_N => PRESENT_STATE~3.DATAIN
+CLK => PRESENT_STATE~1.DATAIN
+load => PROCESS_STATE_UPDATE.IN0
+enable_tx => PROCESS_STATE_UPDATE.IN1
+sh <= sh.DB_MAX_OUTPUT_PORT_TYPE
+parallel_load <= parallel_load.DB_MAX_OUTPUT_PORT_TYPE
+enable_137 <= enable_137.DB_MAX_OUTPUT_PORT_TYPE
+enable_9 <= enable_9.DB_MAX_OUTPUT_PORT_TYPE
+reset_n_datapath <= reset_n_datapath.DB_MAX_OUTPUT_PORT_TYPE
+TX_EMPTY <= TX_EMPTY.DB_MAX_OUTPUT_PORT_TYPE
+en_tx_empty <= en_tx_empty.DB_MAX_OUTPUT_PORT_TYPE
+
+

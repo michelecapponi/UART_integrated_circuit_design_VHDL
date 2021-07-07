@@ -1,0 +1,840 @@
+|UART
+clk => RX:RX_definition.clk
+clk => TX:TX_definition.clk
+clk => BI:BI_definition.clk
+clk => Memory:Memory_definition.clk
+rst_n => RX:RX_definition.rst_n
+rst_n => TX:TX_definition.rst_n
+rst_n => BI:BI_definition.rst_n
+CS => BI:BI_definition.cs
+R_W_N => BI:BI_definition.r_w_n
+ATN_ACK => BI:BI_definition.atn_ack
+data_in[0] => BI:BI_definition.din[0]
+data_in[1] => BI:BI_definition.din[1]
+data_in[2] => BI:BI_definition.din[2]
+data_in[3] => BI:BI_definition.din[3]
+data_in[4] => BI:BI_definition.din[4]
+data_in[5] => BI:BI_definition.din[5]
+data_in[6] => BI:BI_definition.din[6]
+data_in[7] => BI:BI_definition.din[7]
+address[0] => BI:BI_definition.address[0]
+address[1] => BI:BI_definition.address[1]
+address[2] => BI:BI_definition.address[2]
+ATN << BI:BI_definition.atn
+data_out[0] << BI:BI_definition.dout[0]
+data_out[1] << BI:BI_definition.dout[1]
+data_out[2] << BI:BI_definition.dout[2]
+data_out[3] << BI:BI_definition.dout[3]
+data_out[4] << BI:BI_definition.dout[4]
+data_out[5] << BI:BI_definition.dout[5]
+data_out[6] << BI:BI_definition.dout[6]
+data_out[7] << BI:BI_definition.dout[7]
+rxd => RX:RX_definition.RxD
+txd << TX:TX_definition.TxD
+
+
+|UART|RX:RX_definition
+clk => datapath_rx:label_datapath_rx.clk
+clk => fsm_rx:label_fsm_rx.CLK
+rst_n => fsm_rx:label_fsm_rx.RST_N
+enable_rx => fsm_rx:label_fsm_rx.enable_rx
+err <= fsm_rx:label_fsm_rx.err
+rx_full <= fsm_rx:label_fsm_rx.rx_full
+en_err <= fsm_rx:label_fsm_rx.en_err
+en_rx_full <= fsm_rx:label_fsm_rx.en_rx_full
+dato_rx[0] <= datapath_rx:label_datapath_rx.dato_rx[7]
+dato_rx[1] <= datapath_rx:label_datapath_rx.dato_rx[6]
+dato_rx[2] <= datapath_rx:label_datapath_rx.dato_rx[5]
+dato_rx[3] <= datapath_rx:label_datapath_rx.dato_rx[4]
+dato_rx[4] <= datapath_rx:label_datapath_rx.dato_rx[3]
+dato_rx[5] <= datapath_rx:label_datapath_rx.dato_rx[2]
+dato_rx[6] <= datapath_rx:label_datapath_rx.dato_rx[1]
+dato_rx[7] <= datapath_rx:label_datapath_rx.dato_rx[0]
+RxD => datapath_rx:label_datapath_rx.RxD
+RxD => fsm_rx:label_fsm_rx.RxD
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx
+clk => sipo_8:samples_reg.clk
+clk => sipo_10:data_reg.clk
+clk => counter_10:cnt0.clk
+clk => counter_16:cnt1.clk
+clk => counter_wait:cnt2.clk
+clk => counter_8:cnt3.clk
+rst_n => sipo_8:samples_reg.rst_n
+rst_n => sipo_10:data_reg.rst_n
+rst_n => counter_10:cnt0.rst_n
+rst_n => counter_16:cnt1.rst_n
+rst_n => counter_wait:cnt2.rst_n
+rst_n => counter_8:cnt3.rst_n
+dato_rx[0] <= sipo_10:data_reg.p_out[1]
+dato_rx[1] <= sipo_10:data_reg.p_out[2]
+dato_rx[2] <= sipo_10:data_reg.p_out[3]
+dato_rx[3] <= sipo_10:data_reg.p_out[4]
+dato_rx[4] <= sipo_10:data_reg.p_out[5]
+dato_rx[5] <= sipo_10:data_reg.p_out[6]
+dato_rx[6] <= sipo_10:data_reg.p_out[7]
+dato_rx[7] <= sipo_10:data_reg.p_out[8]
+sh_sample => sipo_8:samples_reg.sh
+sh_dato => sipo_10:data_reg.sh
+voter <= voter.DB_MAX_OUTPUT_PORT_TYPE
+RxD => sipo_8:samples_reg.sr_in
+enable_8 => counter_8:cnt3.enable
+enable_10 => counter_10:cnt0.enable
+enable_16 => counter_16:cnt1.enable
+enable_wait => counter_wait:cnt2.enable
+tc_8 <= counter_8:cnt3.tc
+tc_10 <= counter_10:cnt0.tc
+tc_16 <= counter_16:cnt1.tc
+tc_wait <= counter_wait:cnt2.tc
+tc_1 <= counter_10:cnt0.tc_1
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|sipo_8:samples_reg
+p_out[0] <= sr[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= sr[1].DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= sr[2].DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= sr[3].DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= sr[4].DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= sr[5].DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= sr[6].DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= sr[7].DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr[7].DATAIN
+sh => sr[0].ENA
+sh => sr[7].ENA
+sh => sr[6].ENA
+sh => sr[5].ENA
+sh => sr[4].ENA
+sh => sr[3].ENA
+sh => sr[2].ENA
+sh => sr[1].ENA
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|sipo_10:data_reg
+p_out[0] <= sr[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= sr[1].DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= sr[2].DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= sr[3].DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= sr[4].DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= sr[5].DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= sr[6].DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= sr[7].DB_MAX_OUTPUT_PORT_TYPE
+p_out[8] <= sr[8].DB_MAX_OUTPUT_PORT_TYPE
+p_out[9] <= sr[9].DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr[9].DATAIN
+sh => sr[0].ENA
+sh => sr[9].ENA
+sh => sr[8].ENA
+sh => sr[7].ENA
+sh => sr[6].ENA
+sh => sr[5].ENA
+sh => sr[4].ENA
+sh => sr[3].ENA
+sh => sr[2].ENA
+sh => sr[1].ENA
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+clk => sr[8].CLK
+clk => sr[9].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+rst_n => sr[8].PRESET
+rst_n => sr[9].PRESET
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|counter_10:cnt0
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+enable => number[0].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+tc_1 <= tc_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|counter_16:cnt1
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+clk => number[4].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+rst_n => number[4].ACLR
+enable => number[0].ENA
+enable => number[4].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|counter_wait:cnt2
+clk => number[0].CLK
+rst_n => number[0].ACLR
+enable => number[0].ENA
+tc <= number[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|RX:RX_definition|datapath_rx:label_datapath_rx|counter_8:cnt3
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+enable => number[0].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|RX:RX_definition|fsm_rx:label_fsm_rx
+TC_1 => PROCESS_STATE_UPDATE.IN0
+TC_WAIT => NEXT_STATE.DATAA
+TC_WAIT => NEXT_STATE.DATAA
+TC_8 => PROCESS_STATE_UPDATE.IN0
+TC_16 => PROCESS_STATE_UPDATE.IN1
+TC_16 => NEXT_STATE.DATAA
+TC_16 => NEXT_STATE.DATAA
+TC_10 => NEXT_STATE.CHECK.DATAB
+TC_10 => Selector1.IN3
+voter => PROCESS_STATE_UPDATE.IN1
+voter => Selector0.IN6
+voter => NEXT_STATE.ERROR.DATAB
+RxD => PROCESS_STATE_UPDATE.IN0
+RST_N => PRESENT_STATE~3.DATAIN
+CLK => PRESENT_STATE~1.DATAIN
+enable_rx => PROCESS_STATE_UPDATE.IN1
+sh_sample <= sh_sample.DB_MAX_OUTPUT_PORT_TYPE
+sh_dato <= sh_dato.DB_MAX_OUTPUT_PORT_TYPE
+enable_wait <= enable_wait.DB_MAX_OUTPUT_PORT_TYPE
+enable_8 <= enable_8.DB_MAX_OUTPUT_PORT_TYPE
+enable_10 <= enable_10.DB_MAX_OUTPUT_PORT_TYPE
+enable_16 <= enable_16.DB_MAX_OUTPUT_PORT_TYPE
+reset_n_datapath <= reset_n_datapath.DB_MAX_OUTPUT_PORT_TYPE
+rx_full <= rx_full.DB_MAX_OUTPUT_PORT_TYPE
+en_rx_full <= en_rx_full.DB_MAX_OUTPUT_PORT_TYPE
+en_err <= en_err.DB_MAX_OUTPUT_PORT_TYPE
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|TX:TX_definition
+clk => datapath:label_datapath.clk
+clk => fsm:label_fsm.CLK
+rst_n => fsm:label_fsm.RST_N
+enable_tx => fsm:label_fsm.enable_tx
+load => fsm:label_fsm.load
+tx_empty <= fsm:label_fsm.TX_EMPTY
+dato_tx[0] => datapath:label_datapath.p_in[0]
+dato_tx[1] => datapath:label_datapath.p_in[1]
+dato_tx[2] => datapath:label_datapath.p_in[2]
+dato_tx[3] => datapath:label_datapath.p_in[3]
+dato_tx[4] => datapath:label_datapath.p_in[4]
+dato_tx[5] => datapath:label_datapath.p_in[5]
+dato_tx[6] => datapath:label_datapath.p_in[6]
+dato_tx[7] => datapath:label_datapath.p_in[7]
+en_tx_empty <= fsm:label_fsm.en_tx_empty
+TxD <= datapath:label_datapath.TxD
+
+
+|UART|TX:TX_definition|datapath:label_datapath
+clk => shift_10_bits:shift_register.clk
+clk => counter:count.clk
+clk => counter_fsm:count_fsm.clk
+rst_n => shift_10_bits:shift_register.rst_n
+rst_n => counter:count.rst_n
+rst_n => counter_fsm:count_fsm.rst_n
+p_in[0] => shift_10_bits:shift_register.p_in[1]
+p_in[1] => shift_10_bits:shift_register.p_in[2]
+p_in[2] => shift_10_bits:shift_register.p_in[3]
+p_in[3] => shift_10_bits:shift_register.p_in[4]
+p_in[4] => shift_10_bits:shift_register.p_in[5]
+p_in[5] => shift_10_bits:shift_register.p_in[6]
+p_in[6] => shift_10_bits:shift_register.p_in[7]
+p_in[7] => shift_10_bits:shift_register.p_in[8]
+parallel_load => shift_10_bits:shift_register.load
+sh => shift_10_bits:shift_register.sh
+TxD <= shift_10_bits:shift_register.sr_out
+enable_137 => counter:count.enable
+enable_9 => counter_fsm:count_fsm.enable
+tc_137 <= counter:count.tc
+tc_9 <= counter_fsm:count_fsm.tc
+
+
+|UART|TX:TX_definition|datapath:label_datapath|shift_10_bits:shift_register
+p_in[0] => sr.DATAB
+p_in[1] => sr.DATAB
+p_in[2] => sr.DATAB
+p_in[3] => sr.DATAB
+p_in[4] => sr.DATAB
+p_in[5] => sr.DATAB
+p_in[6] => sr.DATAB
+p_in[7] => sr.DATAB
+p_in[8] => sr.DATAB
+p_in[9] => sr.DATAB
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+load => sr.OUTPUTSELECT
+sr_in => sr.DATAB
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+sh => sr.OUTPUTSELECT
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+clk => sr[8].CLK
+clk => sr[9].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+rst_n => sr[8].PRESET
+rst_n => sr[9].PRESET
+sr_out <= sr[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|TX:TX_definition|datapath:label_datapath|counter:count
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+clk => number[4].CLK
+clk => number[5].CLK
+clk => number[6].CLK
+clk => number[7].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+rst_n => number[4].ACLR
+rst_n => number[5].ACLR
+rst_n => number[6].ACLR
+rst_n => number[7].ACLR
+enable => number[0].ENA
+enable => number[7].ENA
+enable => number[6].ENA
+enable => number[5].ENA
+enable => number[4].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|TX:TX_definition|datapath:label_datapath|counter_fsm:count_fsm
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+enable => number[0].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|TX:TX_definition|fsm:label_fsm
+TC_137 => NEXT_STATE.OUTPUTSELECT
+TC_137 => NEXT_STATE.OUTPUTSELECT
+TC_137 => Selector1.IN2
+TC_9 => NEXT_STATE.DATAA
+TC_9 => NEXT_STATE.DATAA
+RST_N => PRESENT_STATE~3.DATAIN
+CLK => PRESENT_STATE~1.DATAIN
+load => PROCESS_STATE_UPDATE.IN0
+enable_tx => PROCESS_STATE_UPDATE.IN1
+sh <= sh.DB_MAX_OUTPUT_PORT_TYPE
+parallel_load <= parallel_load.DB_MAX_OUTPUT_PORT_TYPE
+enable_137 <= enable_137.DB_MAX_OUTPUT_PORT_TYPE
+enable_9 <= enable_9.DB_MAX_OUTPUT_PORT_TYPE
+reset_n_datapath <= reset_n_datapath.DB_MAX_OUTPUT_PORT_TYPE
+TX_EMPTY <= TX_EMPTY.DB_MAX_OUTPUT_PORT_TYPE
+en_tx_empty <= en_tx_empty.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BI:BI_definition
+clk => datapath_bi:label_datapath_bi.clk
+clk => fsm_bi:label_fsm_bi.clk
+rst_n => fsm_bi:label_fsm_bi.rst_n
+din[0] => datapath_bi:label_datapath_bi.din[0]
+din[1] => datapath_bi:label_datapath_bi.din[1]
+din[2] => datapath_bi:label_datapath_bi.din[2]
+din[3] => datapath_bi:label_datapath_bi.din[3]
+din[4] => datapath_bi:label_datapath_bi.din[4]
+din[5] => datapath_bi:label_datapath_bi.din[5]
+din[6] => datapath_bi:label_datapath_bi.din[6]
+din[7] => datapath_bi:label_datapath_bi.din[7]
+r_w_n => fsm_bi:label_fsm_bi.r_w_n
+address[0] => fsm_bi:label_fsm_bi.address[0]
+address[1] => fsm_bi:label_fsm_bi.address[1]
+address[2] => fsm_bi:label_fsm_bi.address[2]
+atn_ack => fsm_bi:label_fsm_bi.atn_ack
+cs => fsm_bi:label_fsm_bi.cs
+reg_rx_full => datapath_bi:label_datapath_bi.rx_full
+reg_rx_full => fsm_bi:label_fsm_bi.rx_full
+reg_err => datapath_bi:label_datapath_bi.err
+reg_tx_empty => datapath_bi:label_datapath_bi.tx_empty
+reg_tx_empty => fsm_bi:label_fsm_bi.tx_empty
+en_reg_rx_full => fsm_bi:label_fsm_bi.en_rx_full
+en_reg_tx_empty => fsm_bi:label_fsm_bi.en_tx_empty
+reg_rx_data[0] => datapath_bi:label_datapath_bi.rx_data[0]
+reg_rx_data[1] => datapath_bi:label_datapath_bi.rx_data[1]
+reg_rx_data[2] => datapath_bi:label_datapath_bi.rx_data[2]
+reg_rx_data[3] => datapath_bi:label_datapath_bi.rx_data[3]
+reg_rx_data[4] => datapath_bi:label_datapath_bi.rx_data[4]
+reg_rx_data[5] => datapath_bi:label_datapath_bi.rx_data[5]
+reg_rx_data[6] => datapath_bi:label_datapath_bi.rx_data[6]
+reg_rx_data[7] => datapath_bi:label_datapath_bi.rx_data[7]
+load <= fsm_bi:label_fsm_bi.load
+reg_tx_data[0] <= datapath_bi:label_datapath_bi.data_out[0]
+reg_tx_data[1] <= datapath_bi:label_datapath_bi.data_out[1]
+reg_tx_data[2] <= datapath_bi:label_datapath_bi.data_out[2]
+reg_tx_data[3] <= datapath_bi:label_datapath_bi.data_out[3]
+reg_tx_data[4] <= datapath_bi:label_datapath_bi.data_out[4]
+reg_tx_data[5] <= datapath_bi:label_datapath_bi.data_out[5]
+reg_tx_data[6] <= datapath_bi:label_datapath_bi.data_out[6]
+reg_tx_data[7] <= datapath_bi:label_datapath_bi.data_out[7]
+reg_ctrl_data[0] <= datapath_bi:label_datapath_bi.data_out[0]
+reg_ctrl_data[1] <= datapath_bi:label_datapath_bi.data_out[1]
+atn <= fsm_bi:label_fsm_bi.atn
+dout[0] <= datapath_bi:label_datapath_bi.dout[0]
+dout[1] <= datapath_bi:label_datapath_bi.dout[1]
+dout[2] <= datapath_bi:label_datapath_bi.dout[2]
+dout[3] <= datapath_bi:label_datapath_bi.dout[3]
+dout[4] <= datapath_bi:label_datapath_bi.dout[4]
+dout[5] <= datapath_bi:label_datapath_bi.dout[5]
+dout[6] <= datapath_bi:label_datapath_bi.dout[6]
+dout[7] <= datapath_bi:label_datapath_bi.dout[7]
+rst_n_regs <= fsm_bi:label_fsm_bi.rst_n_regs
+rst_n_rx <= fsm_bi:label_fsm_bi.rst_n_rx
+enable_tx_data_reg <= fsm_bi:label_fsm_bi.enable_tx_data_reg
+enable_ctrl_reg <= fsm_bi:label_fsm_bi.enable_ctrl_reg
+
+
+|UART|BI:BI_definition|datapath_bi:label_datapath_bi
+clk => pipeline_reg_8_bits:pipe_reg.clk
+rst_n => pipeline_reg_8_bits:pipe_reg.rst_n
+sel => mux_2_to_1_8_bits:out_mux.sel
+din[0] => pipeline_reg_8_bits:pipe_reg.reg_in[0]
+din[1] => pipeline_reg_8_bits:pipe_reg.reg_in[1]
+din[2] => pipeline_reg_8_bits:pipe_reg.reg_in[2]
+din[3] => pipeline_reg_8_bits:pipe_reg.reg_in[3]
+din[4] => pipeline_reg_8_bits:pipe_reg.reg_in[4]
+din[5] => pipeline_reg_8_bits:pipe_reg.reg_in[5]
+din[6] => pipeline_reg_8_bits:pipe_reg.reg_in[6]
+din[7] => pipeline_reg_8_bits:pipe_reg.reg_in[7]
+rx_full => mux_2_to_1_8_bits:out_mux.IN_1[2]
+err => mux_2_to_1_8_bits:out_mux.IN_1[1]
+tx_empty => mux_2_to_1_8_bits:out_mux.IN_1[0]
+rx_data[0] => mux_2_to_1_8_bits:out_mux.IN_2[0]
+rx_data[1] => mux_2_to_1_8_bits:out_mux.IN_2[1]
+rx_data[2] => mux_2_to_1_8_bits:out_mux.IN_2[2]
+rx_data[3] => mux_2_to_1_8_bits:out_mux.IN_2[3]
+rx_data[4] => mux_2_to_1_8_bits:out_mux.IN_2[4]
+rx_data[5] => mux_2_to_1_8_bits:out_mux.IN_2[5]
+rx_data[6] => mux_2_to_1_8_bits:out_mux.IN_2[6]
+rx_data[7] => mux_2_to_1_8_bits:out_mux.IN_2[7]
+dout[0] <= mux_2_to_1_8_bits:out_mux.OUTPUT[0]
+dout[1] <= mux_2_to_1_8_bits:out_mux.OUTPUT[1]
+dout[2] <= mux_2_to_1_8_bits:out_mux.OUTPUT[2]
+dout[3] <= mux_2_to_1_8_bits:out_mux.OUTPUT[3]
+dout[4] <= mux_2_to_1_8_bits:out_mux.OUTPUT[4]
+dout[5] <= mux_2_to_1_8_bits:out_mux.OUTPUT[5]
+dout[6] <= mux_2_to_1_8_bits:out_mux.OUTPUT[6]
+dout[7] <= mux_2_to_1_8_bits:out_mux.OUTPUT[7]
+data_out[0] <= pipeline_reg_8_bits:pipe_reg.reg_out[0]
+data_out[1] <= pipeline_reg_8_bits:pipe_reg.reg_out[1]
+data_out[2] <= pipeline_reg_8_bits:pipe_reg.reg_out[2]
+data_out[3] <= pipeline_reg_8_bits:pipe_reg.reg_out[3]
+data_out[4] <= pipeline_reg_8_bits:pipe_reg.reg_out[4]
+data_out[5] <= pipeline_reg_8_bits:pipe_reg.reg_out[5]
+data_out[6] <= pipeline_reg_8_bits:pipe_reg.reg_out[6]
+data_out[7] <= pipeline_reg_8_bits:pipe_reg.reg_out[7]
+
+
+|UART|BI:BI_definition|datapath_bi:label_datapath_bi|pipeline_reg_8_bits:pipe_reg
+clk => reg_out[0]~reg0.CLK
+clk => reg_out[1]~reg0.CLK
+clk => reg_out[2]~reg0.CLK
+clk => reg_out[3]~reg0.CLK
+clk => reg_out[4]~reg0.CLK
+clk => reg_out[5]~reg0.CLK
+clk => reg_out[6]~reg0.CLK
+clk => reg_out[7]~reg0.CLK
+enable => reg_out[7]~reg0.ENA
+enable => reg_out[6]~reg0.ENA
+enable => reg_out[5]~reg0.ENA
+enable => reg_out[4]~reg0.ENA
+enable => reg_out[3]~reg0.ENA
+enable => reg_out[2]~reg0.ENA
+enable => reg_out[1]~reg0.ENA
+enable => reg_out[0]~reg0.ENA
+rst_n => reg_out[0]~reg0.ACLR
+rst_n => reg_out[1]~reg0.ACLR
+rst_n => reg_out[2]~reg0.ACLR
+rst_n => reg_out[3]~reg0.ACLR
+rst_n => reg_out[4]~reg0.ACLR
+rst_n => reg_out[5]~reg0.ACLR
+rst_n => reg_out[6]~reg0.ACLR
+rst_n => reg_out[7]~reg0.ACLR
+reg_in[0] => reg_out[0]~reg0.DATAIN
+reg_in[1] => reg_out[1]~reg0.DATAIN
+reg_in[2] => reg_out[2]~reg0.DATAIN
+reg_in[3] => reg_out[3]~reg0.DATAIN
+reg_in[4] => reg_out[4]~reg0.DATAIN
+reg_in[5] => reg_out[5]~reg0.DATAIN
+reg_in[6] => reg_out[6]~reg0.DATAIN
+reg_in[7] => reg_out[7]~reg0.DATAIN
+reg_out[0] <= reg_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[1] <= reg_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[2] <= reg_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[3] <= reg_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[4] <= reg_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[5] <= reg_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[6] <= reg_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reg_out[7] <= reg_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BI:BI_definition|datapath_bi:label_datapath_bi|mux_2_to_1_8_bits:out_mux
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+sel => OUTPUT.OUTPUTSELECT
+IN_1[0] => OUTPUT.DATAB
+IN_1[1] => OUTPUT.DATAB
+IN_1[2] => OUTPUT.DATAB
+IN_1[3] => OUTPUT.DATAB
+IN_1[4] => OUTPUT.DATAB
+IN_1[5] => OUTPUT.DATAB
+IN_1[6] => OUTPUT.DATAB
+IN_1[7] => OUTPUT.DATAB
+IN_2[0] => OUTPUT.DATAA
+IN_2[1] => OUTPUT.DATAA
+IN_2[2] => OUTPUT.DATAA
+IN_2[3] => OUTPUT.DATAA
+IN_2[4] => OUTPUT.DATAA
+IN_2[5] => OUTPUT.DATAA
+IN_2[6] => OUTPUT.DATAA
+IN_2[7] => OUTPUT.DATAA
+OUTPUT[0] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[5] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[6] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[7] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BI:BI_definition|fsm_bi:label_fsm_bi
+clk => PRESENT_STATE~1.DATAIN
+rst_n => PRESENT_STATE~3.DATAIN
+cs => PROCESS_STATE_UPDATE.IN0
+cs => PROCESS_STATE_UPDATE.IN0
+address[0] => Equal0.IN2
+address[0] => Equal1.IN2
+address[0] => Equal2.IN1
+address[0] => Equal3.IN2
+address[1] => Equal0.IN1
+address[1] => Equal1.IN1
+address[1] => Equal2.IN2
+address[1] => Equal3.IN1
+address[2] => Equal0.IN0
+address[2] => Equal1.IN0
+address[2] => Equal2.IN0
+address[2] => Equal3.IN0
+r_w_n => PROCESS_STATE_UPDATE.IN1
+r_w_n => PROCESS_STATE_UPDATE.IN1
+atn_ack => NEXT_STATE.OUTPUTSELECT
+atn_ack => NEXT_STATE.OUTPUTSELECT
+atn_ack => NEXT_STATE.OUTPUTSELECT
+atn_ack => NEXT_STATE.OUTPUTSELECT
+atn_ack => NEXT_STATE.OUTPUTSELECT
+atn_ack => Selector0.IN4
+rx_full => PROCESS_STATE_UPDATE.IN0
+tx_empty => PROCESS_STATE_UPDATE.IN1
+en_rx_full => PROCESS_STATE_UPDATE.IN0
+en_tx_empty => PROCESS_STATE_UPDATE.IN1
+load <= load.DB_MAX_OUTPUT_PORT_TYPE
+atn <= atn.DB_MAX_OUTPUT_PORT_TYPE
+rst_n_regs <= rst_n_regs.DB_MAX_OUTPUT_PORT_TYPE
+rst_n_rx <= rst_n_rx.DB_MAX_OUTPUT_PORT_TYPE
+enable_tx_data_reg <= enable_tx_data_reg.DB_MAX_OUTPUT_PORT_TYPE
+enable_ctrl_reg <= enable_ctrl_reg.DB_MAX_OUTPUT_PORT_TYPE
+sel <= sel.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|Memory:Memory_definition
+clk => PIPO_8:TX_REG.clk
+clk => PIPO_8:RX_REG.clk
+clk => PIPO_2:CTRL_REG.clk
+clk => FF:FF_RX_FULL.clk
+clk => FF:FF_TX_EMPTY.clk
+clk => FF:FF_ERR.clk
+clk => FF:FF_LOAD_TX.clk
+rst_n => rst_signal_rx.IN0
+rst_n => PIPO_8:TX_REG.rst_n
+rst_n => PIPO_8:RX_REG.rst_n
+rst_n => PIPO_2:CTRL_REG.rst_n
+rst_n => FF:FF_TX_EMPTY.rst_n
+rst_n => FF:FF_LOAD_TX.rst_n
+rst_rx => rst_signal_rx.IN1
+en_rx_full => FF:FF_RX_FULL.load
+en_err => FF:FF_ERR.load
+en_tx_empty => FF:FF_TX_EMPTY.load
+en_rx_data => PIPO_8:RX_REG.load
+en_tx_data => PIPO_8:TX_REG.load
+en_ctrl_data => PIPO_2:CTRL_REG.load
+rx_data_in[0] => PIPO_8:RX_REG.data_in[0]
+rx_data_in[1] => PIPO_8:RX_REG.data_in[1]
+rx_data_in[2] => PIPO_8:RX_REG.data_in[2]
+rx_data_in[3] => PIPO_8:RX_REG.data_in[3]
+rx_data_in[4] => PIPO_8:RX_REG.data_in[4]
+rx_data_in[5] => PIPO_8:RX_REG.data_in[5]
+rx_data_in[6] => PIPO_8:RX_REG.data_in[6]
+rx_data_in[7] => PIPO_8:RX_REG.data_in[7]
+tx_data_in[0] => PIPO_8:TX_REG.data_in[0]
+tx_data_in[1] => PIPO_8:TX_REG.data_in[1]
+tx_data_in[2] => PIPO_8:TX_REG.data_in[2]
+tx_data_in[3] => PIPO_8:TX_REG.data_in[3]
+tx_data_in[4] => PIPO_8:TX_REG.data_in[4]
+tx_data_in[5] => PIPO_8:TX_REG.data_in[5]
+tx_data_in[6] => PIPO_8:TX_REG.data_in[6]
+tx_data_in[7] => PIPO_8:TX_REG.data_in[7]
+ctrl_data_in[0] => PIPO_2:CTRL_REG.data_in[0]
+ctrl_data_in[1] => PIPO_2:CTRL_REG.data_in[1]
+rx_full_in => FF:FF_RX_FULL.data_in
+tx_empty_in => FF:FF_TX_EMPTY.data_in
+err_in => FF:FF_ERR.data_in
+load => FF:FF_LOAD_TX.data_in
+rx_data_out[0] <= PIPO_8:RX_REG.data_out[0]
+rx_data_out[1] <= PIPO_8:RX_REG.data_out[1]
+rx_data_out[2] <= PIPO_8:RX_REG.data_out[2]
+rx_data_out[3] <= PIPO_8:RX_REG.data_out[3]
+rx_data_out[4] <= PIPO_8:RX_REG.data_out[4]
+rx_data_out[5] <= PIPO_8:RX_REG.data_out[5]
+rx_data_out[6] <= PIPO_8:RX_REG.data_out[6]
+rx_data_out[7] <= PIPO_8:RX_REG.data_out[7]
+tx_data_out[0] <= PIPO_8:TX_REG.data_out[0]
+tx_data_out[1] <= PIPO_8:TX_REG.data_out[1]
+tx_data_out[2] <= PIPO_8:TX_REG.data_out[2]
+tx_data_out[3] <= PIPO_8:TX_REG.data_out[3]
+tx_data_out[4] <= PIPO_8:TX_REG.data_out[4]
+tx_data_out[5] <= PIPO_8:TX_REG.data_out[5]
+tx_data_out[6] <= PIPO_8:TX_REG.data_out[6]
+tx_data_out[7] <= PIPO_8:TX_REG.data_out[7]
+ctrl_data_out_rx <= PIPO_2:CTRL_REG.data_out[1]
+ctrl_data_out_tx <= PIPO_2:CTRL_REG.data_out[0]
+rx_full_out <= FF:FF_RX_FULL.data_out
+tx_empty_out <= FF:FF_TX_EMPTY.data_out
+err_out <= FF:FF_ERR.data_out
+load_tx <= FF:FF_LOAD_TX.data_out
+
+
+|UART|Memory:Memory_definition|PIPO_8:TX_REG
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+load => data_out[7]~reg0.ENA
+load => data_out[6]~reg0.ENA
+load => data_out[5]~reg0.ENA
+load => data_out[4]~reg0.ENA
+load => data_out[3]~reg0.ENA
+load => data_out[2]~reg0.ENA
+load => data_out[1]~reg0.ENA
+load => data_out[0]~reg0.ENA
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+rst_n => data_out[0]~reg0.ACLR
+rst_n => data_out[1]~reg0.ACLR
+rst_n => data_out[2]~reg0.ACLR
+rst_n => data_out[3]~reg0.ACLR
+rst_n => data_out[4]~reg0.ACLR
+rst_n => data_out[5]~reg0.ACLR
+rst_n => data_out[6]~reg0.ACLR
+rst_n => data_out[7]~reg0.ACLR
+
+
+|UART|Memory:Memory_definition|PIPO_8:RX_REG
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+load => data_out[7]~reg0.ENA
+load => data_out[6]~reg0.ENA
+load => data_out[5]~reg0.ENA
+load => data_out[4]~reg0.ENA
+load => data_out[3]~reg0.ENA
+load => data_out[2]~reg0.ENA
+load => data_out[1]~reg0.ENA
+load => data_out[0]~reg0.ENA
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+rst_n => data_out[0]~reg0.ACLR
+rst_n => data_out[1]~reg0.ACLR
+rst_n => data_out[2]~reg0.ACLR
+rst_n => data_out[3]~reg0.ACLR
+rst_n => data_out[4]~reg0.ACLR
+rst_n => data_out[5]~reg0.ACLR
+rst_n => data_out[6]~reg0.ACLR
+rst_n => data_out[7]~reg0.ACLR
+
+
+|UART|Memory:Memory_definition|PIPO_2:CTRL_REG
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+load => data_out[1]~reg0.ENA
+load => data_out[0]~reg0.ENA
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+rst_n => data_out[0]~reg0.ACLR
+rst_n => data_out[1]~reg0.ACLR
+
+
+|UART|Memory:Memory_definition|FF:FF_RX_FULL
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out~reg0.DATAIN
+load => data_out~reg0.ENA
+reset_value => data_out~reg0.ADATA
+clk => data_out~reg0.CLK
+rst_n => data_out~reg0.ALOAD
+
+
+|UART|Memory:Memory_definition|FF:FF_TX_EMPTY
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out~reg0.DATAIN
+load => data_out~reg0.ENA
+reset_value => data_out~reg0.ADATA
+clk => data_out~reg0.CLK
+rst_n => data_out~reg0.ALOAD
+
+
+|UART|Memory:Memory_definition|FF:FF_ERR
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out~reg0.DATAIN
+load => data_out~reg0.ENA
+reset_value => data_out~reg0.ADATA
+clk => data_out~reg0.CLK
+rst_n => data_out~reg0.ALOAD
+
+
+|UART|Memory:Memory_definition|FF:FF_LOAD_TX
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out~reg0.DATAIN
+load => data_out~reg0.ENA
+reset_value => data_out~reg0.ADATA
+clk => data_out~reg0.CLK
+rst_n => data_out~reg0.ALOAD
+
+

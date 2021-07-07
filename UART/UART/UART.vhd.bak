@@ -1,0 +1,87 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity UART is
+port (
+		clk: in std_logic;
+		rst_n: in std_logic;
+		CS, R_W_N, ATN_ACK : in std_logic;
+		data_in : in std_logic_vector(7 downto 0);
+		ATN : out std_logic;
+		data_out : out std_logic_vector(7 downto 0)
+     );
+end entity;
+
+architecture behaviour of UART is
+
+component TX is
+port (
+		clk: in std_logic;
+		rst_n: in std_logic;
+		enable_tx: in std_logic;
+		load: in std_logic;
+		tx_empty: out std_logic;
+		dato_tx: in std_logic_vector(7 downto 0);
+		en_tx_empty: out std_logic;
+		TxD: out std_logic
+     );
+end component;
+
+component RX is
+port (
+		clk: in std_logic;
+		rst_n: in std_logic;
+		enable_rx: in std_logic;
+		err: out std_logic;
+		rx_full: out std_logic;
+		en_err, en_rx_full: out std_logic;
+		dato_rx: out std_logic_vector(7 downto 0);
+		RxD: in std_logic
+     );
+end component;
+
+component BI is
+port (
+		clk            : in std_logic;
+		rst_n          : in std_logic;
+		din            : in std_logic_vector(7 downto 0);
+		r_w_n          : in std_logic;
+		address        : in std_logic_vector(2 downto 0);
+		atn_ack        : in std_logic;
+		cs             : in std_logic;
+		reg_rx_full    : in std_logic;
+		reg_err        : in std_logic;
+		reg_tx_empty   : in std_logic;
+      en_reg_rx_full : in std_logic;
+		en_reg_tx_empty: in std_logic;
+		reg_rx_data    : in std_logic_vector(7 downto 0);
+		reg_tx_data    : out std_logic_vector(7 downto 0);
+		reg_ctrl_data  : out std_logic_vector(1 downto 0);
+		atn            : out std_logic; 
+		dout           : out std_logic_vector(7 downto 0);
+		rst_n_regs     : buffer std_logic;
+		rst_n_rx       : out std_logic;
+		enable_tx_data_reg : out std_logic;
+		enable_ctrl_reg    : out std_logic
+     );
+end component;
+
+component Memory is
+	port 
+	(
+		clk, rst_n : in std_logic;
+		rst_rx, rst_ctrl_data : in std_logic;
+		en_rx_full, en_err, en_tx_empty : in std_logic;
+		en_rx_data, en_tx_data, en_ctrl_data : in std_logic;
+		rx_data_in, tx_data_in : in std_logic_vector(7 downto 0);
+		ctrl_data_in : in std_logic_vector(1 downto 0);
+		rx_full_in, tx_empty_in, err_in : in std_logic;
+		rx_data_out, tx_data_out : out std_logic_vector(7 downto 0);
+		ctrl_data_out : out std_logic_vector(1 downto 0);
+		rx_full_out, tx_empty_out, err_out : out std_logic
+	);
+end component;
+
+begin
+
+END behaviour;

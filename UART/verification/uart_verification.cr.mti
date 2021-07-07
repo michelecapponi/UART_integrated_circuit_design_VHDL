@@ -1,0 +1,240 @@
+{C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_16.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_16
+-- Compiling architecture rtl of counter_16
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fsm
+-- Compiling architecture BEHAVIOUR of fsm
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_8
+-- Compiling architecture rtl of counter_8
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter
+-- Compiling architecture rtl of counter
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity UART_TB_RX
+-- Compiling architecture BEHAVIOUR of UART_TB_RX
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_2.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PIPO_2
+-- Compiling architecture rtl of PIPO_2
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sipo_8
+-- Compiling architecture rtl of sipo_8
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb_tx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity UART_TB
+-- Compiling architecture BEHAVIOUR of UART_TB
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/sipo_10.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sipo_10
+-- Compiling architecture rtl of sipo_10
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/pipeline_reg_8_bits.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pipeline_reg_8_bits
+-- Compiling architecture behaviour of pipeline_reg_8_bits
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/UART.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity UART
+-- Compiling architecture behaviour of UART
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_wait.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_wait
+-- Compiling architecture rtl of counter_wait
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_fsm.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_fsm
+-- Compiling architecture rtl of counter_fsm
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/shift_10_bits.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity shift_10_bits
+-- Compiling architecture rtl of shift_10_bits
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/PIPO_8.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PIPO_8
+-- Compiling architecture rtl of PIPO_8
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fsm_rx
+-- Compiling architecture BEHAVIOUR of fsm_rx
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity datapath
+-- Compiling architecture rtl of datapath
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/verification/uart_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity UART_TB
+-- Compiling architecture BEHAVIOUR of UART_TB
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/fsm_bi.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity fsm_bi
+-- Compiling architecture BEHAVIOUR of fsm_bi
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/counter_10.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity counter_10
+-- Compiling architecture rtl of counter_10
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_rx.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity datapath_rx
+-- Compiling architecture rtl of datapath_rx
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/Memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Memory
+-- Compiling architecture behaviour of Memory
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/datapath_bi.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity datapath_bi
+-- Compiling architecture rtl of datapath_bi
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/RX.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity RX
+-- Compiling architecture rtl of RX
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/BI.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity BI
+-- Compiling architecture rtl of BI
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/FF.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FF
+-- Compiling architecture rtl of FF
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/TX.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TX
+-- Compiling architecture rtl of TX
+
+} {} {}} {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Luca Fumarola/Desktop/RS232/UART/UART/mux_2_to_1_8_bits.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_2_to_1_8_bits
+-- Compiling architecture behaviour of mux_2_to_1_8_bits
+
+} {} {}}

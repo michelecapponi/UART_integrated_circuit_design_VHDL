@@ -1,0 +1,191 @@
+|Memory
+clk => PIPO_8:TX_REG.clk
+clk => PIPO_8:RX_REG.clk
+clk => PIPO_2:CTRL_REG.clk
+clk => FF:FF_RX_FULL.clk
+clk => FF:FF_TX_FULL.clk
+clk => FF:FF_ERR.clk
+rst_n => PIPO_8:TX_REG.rst_n
+rst_n => PIPO_8:RX_REG.rst_n
+rst_n => PIPO_2:CTRL_REG.rst_n
+rst_n => FF:FF_RX_FULL.rst_n
+rst_n => FF:FF_TX_FULL.rst_n
+rst_n => FF:FF_ERR.rst_n
+rst_rx => ~NO_FANOUT~
+rst_tx_data => ~NO_FANOUT~
+rst_rx_data => ~NO_FANOUT~
+rst_ctrl_data => ~NO_FANOUT~
+en_rx_full => FF:FF_RX_FULL.load
+en_err => FF:FF_ERR.load
+en_tx_empty => FF:FF_TX_FULL.load
+en_rx_data => PIPO_8:RX_REG.load
+en_rx_data => PIPO_2:CTRL_REG.load
+en_tx_data => PIPO_8:TX_REG.load
+en_ctrl_data => ~NO_FANOUT~
+rx_data_in[0] => PIPO_8:RX_REG.sr_in[0]
+rx_data_in[1] => PIPO_8:RX_REG.sr_in[1]
+rx_data_in[2] => PIPO_8:RX_REG.sr_in[2]
+rx_data_in[3] => PIPO_8:RX_REG.sr_in[3]
+rx_data_in[4] => PIPO_8:RX_REG.sr_in[4]
+rx_data_in[5] => PIPO_8:RX_REG.sr_in[5]
+rx_data_in[6] => PIPO_8:RX_REG.sr_in[6]
+rx_data_in[7] => PIPO_8:RX_REG.sr_in[7]
+tx_data_in[0] => PIPO_8:TX_REG.sr_in[0]
+tx_data_in[1] => PIPO_8:TX_REG.sr_in[1]
+tx_data_in[2] => PIPO_8:TX_REG.sr_in[2]
+tx_data_in[3] => PIPO_8:TX_REG.sr_in[3]
+tx_data_in[4] => PIPO_8:TX_REG.sr_in[4]
+tx_data_in[5] => PIPO_8:TX_REG.sr_in[5]
+tx_data_in[6] => PIPO_8:TX_REG.sr_in[6]
+tx_data_in[7] => PIPO_8:TX_REG.sr_in[7]
+ctrl_data_in[0] => PIPO_2:CTRL_REG.sr_in[0]
+ctrl_data_in[1] => PIPO_2:CTRL_REG.sr_in[1]
+rx_full_in => FF:FF_RX_FULL.sr_in
+tx_empty_in => FF:FF_TX_FULL.sr_in
+err_in => FF:FF_ERR.sr_in
+rx_data_out[0] << PIPO_8:RX_REG.p_out[0]
+rx_data_out[1] << PIPO_8:RX_REG.p_out[1]
+rx_data_out[2] << PIPO_8:RX_REG.p_out[2]
+rx_data_out[3] << PIPO_8:RX_REG.p_out[3]
+rx_data_out[4] << PIPO_8:RX_REG.p_out[4]
+rx_data_out[5] << PIPO_8:RX_REG.p_out[5]
+rx_data_out[6] << PIPO_8:RX_REG.p_out[6]
+rx_data_out[7] << PIPO_8:RX_REG.p_out[7]
+tx_data_out[0] << PIPO_8:TX_REG.p_out[0]
+tx_data_out[1] << PIPO_8:TX_REG.p_out[1]
+tx_data_out[2] << PIPO_8:TX_REG.p_out[2]
+tx_data_out[3] << PIPO_8:TX_REG.p_out[3]
+tx_data_out[4] << PIPO_8:TX_REG.p_out[4]
+tx_data_out[5] << PIPO_8:TX_REG.p_out[5]
+tx_data_out[6] << PIPO_8:TX_REG.p_out[6]
+tx_data_out[7] << PIPO_8:TX_REG.p_out[7]
+ctrl_data_out[0] << PIPO_2:CTRL_REG.p_out[0]
+ctrl_data_out[1] << PIPO_2:CTRL_REG.p_out[1]
+rx_full_out << FF:FF_RX_FULL.p_out
+tx_empty_out << FF:FF_TX_FULL.p_out
+err_out << FF:FF_ERR.p_out
+
+
+|Memory|PIPO_8:TX_REG
+p_out[0] <= sr[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= sr[1].DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= sr[2].DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= sr[3].DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= sr[4].DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= sr[5].DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= sr[6].DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= sr[7].DB_MAX_OUTPUT_PORT_TYPE
+sr_in[0] => sr[0].DATAIN
+sr_in[1] => sr[1].DATAIN
+sr_in[2] => sr[2].DATAIN
+sr_in[3] => sr[3].DATAIN
+sr_in[4] => sr[4].DATAIN
+sr_in[5] => sr[5].DATAIN
+sr_in[6] => sr[6].DATAIN
+sr_in[7] => sr[7].DATAIN
+load => sr[0].ENA
+load => sr[7].ENA
+load => sr[6].ENA
+load => sr[5].ENA
+load => sr[4].ENA
+load => sr[3].ENA
+load => sr[2].ENA
+load => sr[1].ENA
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+
+
+|Memory|PIPO_8:RX_REG
+p_out[0] <= sr[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= sr[1].DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= sr[2].DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= sr[3].DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= sr[4].DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= sr[5].DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= sr[6].DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= sr[7].DB_MAX_OUTPUT_PORT_TYPE
+sr_in[0] => sr[0].DATAIN
+sr_in[1] => sr[1].DATAIN
+sr_in[2] => sr[2].DATAIN
+sr_in[3] => sr[3].DATAIN
+sr_in[4] => sr[4].DATAIN
+sr_in[5] => sr[5].DATAIN
+sr_in[6] => sr[6].DATAIN
+sr_in[7] => sr[7].DATAIN
+load => sr[0].ENA
+load => sr[7].ENA
+load => sr[6].ENA
+load => sr[5].ENA
+load => sr[4].ENA
+load => sr[3].ENA
+load => sr[2].ENA
+load => sr[1].ENA
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+
+
+|Memory|PIPO_2:CTRL_REG
+p_out[0] <= sr[0].DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= sr[1].DB_MAX_OUTPUT_PORT_TYPE
+sr_in[0] => sr[0].DATAIN
+sr_in[1] => sr[1].DATAIN
+load => sr[0].ENA
+load => sr[1].ENA
+clk => sr[0].CLK
+clk => sr[1].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+
+
+|Memory|FF:FF_RX_FULL
+p_out <= sr.DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr.DATAIN
+load => sr.ENA
+clk => sr.CLK
+rst_n => sr.PRESET
+
+
+|Memory|FF:FF_TX_FULL
+p_out <= sr.DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr.DATAIN
+load => sr.ENA
+clk => sr.CLK
+rst_n => sr.PRESET
+
+
+|Memory|FF:FF_ERR
+p_out <= sr.DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr.DATAIN
+load => sr.ENA
+clk => sr.CLK
+rst_n => sr.PRESET
+
+

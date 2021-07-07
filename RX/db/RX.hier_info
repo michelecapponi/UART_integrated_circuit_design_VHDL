@@ -1,0 +1,272 @@
+|RX
+clk => datapath_rx:label_datapath_rx.clk
+clk => fsm_rx:label_fsm_rx.CLK
+rst_n => fsm_rx:label_fsm_rx.RST_N
+enable_rx => fsm_rx:label_fsm_rx.enable_rx
+err << fsm_rx:label_fsm_rx.err
+rx_full << fsm_rx:label_fsm_rx.rx_full
+dato_rx[0] << datapath_rx:label_datapath_rx.dato_rx[0]
+dato_rx[1] << datapath_rx:label_datapath_rx.dato_rx[1]
+dato_rx[2] << datapath_rx:label_datapath_rx.dato_rx[2]
+dato_rx[3] << datapath_rx:label_datapath_rx.dato_rx[3]
+dato_rx[4] << datapath_rx:label_datapath_rx.dato_rx[4]
+dato_rx[5] << datapath_rx:label_datapath_rx.dato_rx[5]
+dato_rx[6] << datapath_rx:label_datapath_rx.dato_rx[6]
+dato_rx[7] << datapath_rx:label_datapath_rx.dato_rx[7]
+RxD => datapath_rx:label_datapath_rx.RxD
+RxD => fsm_rx:label_fsm_rx.RxD
+
+
+|RX|datapath_rx:label_datapath_rx
+clk => sipo_8:samples_reg.clk
+clk => sipo_10:data_reg.clk
+clk => counter_9:cnt0.clk
+clk => counter_18:cnt1.clk
+clk => counter_3:cnt2.clk
+clk => counter_7:cnt3.clk
+rst_n => sipo_8:samples_reg.rst_n
+rst_n => sipo_10:data_reg.rst_n
+rst_n => counter_9:cnt0.rst_n
+rst_n => counter_18:cnt1.rst_n
+rst_n => counter_3:cnt2.rst_n
+rst_n => counter_7:cnt3.rst_n
+dato_rx[0] <= sipo_10:data_reg.p_out[1]
+dato_rx[1] <= sipo_10:data_reg.p_out[2]
+dato_rx[2] <= sipo_10:data_reg.p_out[3]
+dato_rx[3] <= sipo_10:data_reg.p_out[4]
+dato_rx[4] <= sipo_10:data_reg.p_out[5]
+dato_rx[5] <= sipo_10:data_reg.p_out[6]
+dato_rx[6] <= sipo_10:data_reg.p_out[7]
+dato_rx[7] <= sipo_10:data_reg.p_out[8]
+sh_sample => sipo_8:samples_reg.sh
+sh_dato => sipo_10:data_reg.sh
+voter <= voter.DB_MAX_OUTPUT_PORT_TYPE
+RxD => sipo_8:samples_reg.sr_in
+enable_7 => counter_7:cnt3.enable
+enable_9 => counter_9:cnt0.enable
+enable_18 => counter_18:cnt1.enable
+enable_3 => counter_3:cnt2.enable
+tc_7 <= counter_7:cnt3.tc
+tc_9 <= counter_9:cnt0.tc
+tc_18 <= counter_18:cnt1.tc
+tc_3 <= counter_3:cnt2.tc
+
+
+|RX|datapath_rx:label_datapath_rx|sipo_8:samples_reg
+p_out[0] <= p_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= p_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= p_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= p_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr[7].DATAIN
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => sr[7].ENA
+sh => sr[6].ENA
+sh => sr[5].ENA
+sh => sr[4].ENA
+sh => sr[3].ENA
+sh => sr[2].ENA
+sh => sr[1].ENA
+sh => sr[0].ENA
+clk => p_out[0]~reg0.CLK
+clk => p_out[1]~reg0.CLK
+clk => p_out[2]~reg0.CLK
+clk => p_out[3]~reg0.CLK
+clk => p_out[4]~reg0.CLK
+clk => p_out[5]~reg0.CLK
+clk => p_out[6]~reg0.CLK
+clk => p_out[7]~reg0.CLK
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+rst_n => p_out[0]~reg0.ENA
+rst_n => p_out[7]~reg0.ENA
+rst_n => p_out[6]~reg0.ENA
+rst_n => p_out[5]~reg0.ENA
+rst_n => p_out[4]~reg0.ENA
+rst_n => p_out[3]~reg0.ENA
+rst_n => p_out[2]~reg0.ENA
+rst_n => p_out[1]~reg0.ENA
+
+
+|RX|datapath_rx:label_datapath_rx|sipo_10:data_reg
+p_out[0] <= p_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[4] <= p_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[5] <= p_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[6] <= p_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[7] <= p_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[8] <= p_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[9] <= p_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sr_in => sr[9].DATAIN
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => p_out.OUTPUTSELECT
+sh => sr[9].ENA
+sh => sr[8].ENA
+sh => sr[7].ENA
+sh => sr[6].ENA
+sh => sr[5].ENA
+sh => sr[4].ENA
+sh => sr[3].ENA
+sh => sr[2].ENA
+sh => sr[1].ENA
+sh => sr[0].ENA
+clk => p_out[0]~reg0.CLK
+clk => p_out[1]~reg0.CLK
+clk => p_out[2]~reg0.CLK
+clk => p_out[3]~reg0.CLK
+clk => p_out[4]~reg0.CLK
+clk => p_out[5]~reg0.CLK
+clk => p_out[6]~reg0.CLK
+clk => p_out[7]~reg0.CLK
+clk => p_out[8]~reg0.CLK
+clk => p_out[9]~reg0.CLK
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+clk => sr[8].CLK
+clk => sr[9].CLK
+rst_n => sr[0].PRESET
+rst_n => sr[1].PRESET
+rst_n => sr[2].PRESET
+rst_n => sr[3].PRESET
+rst_n => sr[4].PRESET
+rst_n => sr[5].PRESET
+rst_n => sr[6].PRESET
+rst_n => sr[7].PRESET
+rst_n => sr[8].PRESET
+rst_n => sr[9].PRESET
+rst_n => p_out[0]~reg0.ENA
+rst_n => p_out[9]~reg0.ENA
+rst_n => p_out[8]~reg0.ENA
+rst_n => p_out[7]~reg0.ENA
+rst_n => p_out[6]~reg0.ENA
+rst_n => p_out[5]~reg0.ENA
+rst_n => p_out[4]~reg0.ENA
+rst_n => p_out[3]~reg0.ENA
+rst_n => p_out[2]~reg0.ENA
+rst_n => p_out[1]~reg0.ENA
+
+
+|RX|datapath_rx:label_datapath_rx|counter_9:cnt0
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+enable => number[0].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RX|datapath_rx:label_datapath_rx|counter_18:cnt1
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+clk => number[3].CLK
+clk => number[4].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+rst_n => number[3].ACLR
+rst_n => number[4].ACLR
+enable => number[0].ENA
+enable => number[4].ENA
+enable => number[3].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RX|datapath_rx:label_datapath_rx|counter_3:cnt2
+clk => number[0].CLK
+clk => number[1].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+enable => number[0].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RX|datapath_rx:label_datapath_rx|counter_7:cnt3
+clk => number[0].CLK
+clk => number[1].CLK
+clk => number[2].CLK
+rst_n => number[0].ACLR
+rst_n => number[1].ACLR
+rst_n => number[2].ACLR
+enable => number[0].ENA
+enable => number[2].ENA
+enable => number[1].ENA
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RX|fsm_rx:label_fsm_rx
+TC_3 => NEXT_STATE.SHIFT_DATA.DATAB
+TC_3 => Selector3.IN2
+TC_7 => PROCESS_STATE_UPDATE.IN0
+TC_18 => PROCESS_STATE_UPDATE.IN1
+TC_18 => NEXT_STATE.DATAA
+TC_18 => NEXT_STATE.DATAA
+TC_9 => NEXT_STATE.CHECK.DATAB
+TC_9 => Selector1.IN3
+voter => Selector0.IN5
+voter => NEXT_STATE.ERROR.DATAB
+RxD => PROCESS_STATE_UPDATE.IN0
+RST_N => PRESENT_STATE~3.DATAIN
+CLK => PRESENT_STATE~1.DATAIN
+enable_rx => PROCESS_STATE_UPDATE.IN1
+sh_sample <= sh_sample.DB_MAX_OUTPUT_PORT_TYPE
+sh_dato <= sh_dato.DB_MAX_OUTPUT_PORT_TYPE
+enable_3 <= enable_3.DB_MAX_OUTPUT_PORT_TYPE
+enable_7 <= <GND>
+enable_9 <= <GND>
+enable_18 <= enable_18.DB_MAX_OUTPUT_PORT_TYPE
+reset_n_datapath <= reset_n_datapath.DB_MAX_OUTPUT_PORT_TYPE
+rx_full <= rx_full.DB_MAX_OUTPUT_PORT_TYPE
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
+
+
